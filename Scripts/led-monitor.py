@@ -15,7 +15,7 @@ from time import sleep
 # Folder to watch.
 watch_file = "/path/to/default/folder"
 
-# LED pin mapping.
+# LED pin mapping. Change these accordingly.
 red = 22
 green = 23
 blue = 24
