@@ -33,7 +33,7 @@ class LogMonitorRGB(object):
         self.mask = mask
 
     def run(self):
-        """Configure inotify to toggle LEDs on file changes."""
+        """Configure PyiNotify to change LED's"""
         self.initialize()
         watch_manager = pyinotify.WatchManager()
         watch_manager.add_watch(watch_file, self.mask, rec=True, auto_add=True)
