@@ -13,7 +13,7 @@ from time import sleep
 
 
 # Folder to watch.
-watch_file = "/mnt/exthdd/Downloads"
+watch_file = "/path/to/default/folder"
 
 # LED pin mapping.
 red = 22
