@@ -7,4 +7,4 @@ curl -s https://www.iblocklist.com/lists.php \
 | xargs wget -O - \
 | gunzip \
 | egrep -v '^#' \
-| gzip - > /var/www/html/bt_blocklist.gz
+| gzip - > bt_blocklist.gz
