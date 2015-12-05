@@ -1,6 +1,7 @@
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import transmissionrpc
 import getpass
+import time
 #End imports
 
 
@@ -38,4 +39,3 @@ elif status == "paused":
    setYellow
 else:
    setGreen
-   GPIO.cleanup()
