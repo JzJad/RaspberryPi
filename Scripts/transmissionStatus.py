@@ -37,7 +37,7 @@ status = torrent.status
 
 #============================#
 if status == "stopped":
-    GPIO.setmod(GPIO.BMC)
+    GPIO.setmode(GPIO.BMC)
     GPIO.setup(22, GPIO.OUT)
     GPIO.output(22, 1)
     print "Stopped"
