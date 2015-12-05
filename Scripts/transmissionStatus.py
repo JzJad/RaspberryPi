@@ -13,7 +13,6 @@ blue = 24
 #=== GPIO Setup ===#
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-GPIO.setup(22, GPIO.OUT)
 #GPIO.setup(23, GPIO.OUT)
 #GPIO.setup(24, GPIO.OUT)
 #======End GPIO Setup======#
@@ -36,6 +35,7 @@ sleep(3)
 '''
 #============================#
 if status == "stopped":
+	GPIO.setup(22, GPIO.OUT)
     GPIO.output(22, 1)
     print "Stopped"
 elif status == "download pending":
