@@ -35,7 +35,7 @@ sleep(3)
 '''
 #============================#
 if status == "stopped":
-	GPIO.setup(22, GPIO.OUT)
+    GPIO.setup(22, GPIO.OUT)
     GPIO.output(22, 1)
     print "Stopped"
 elif status == "download pending":
