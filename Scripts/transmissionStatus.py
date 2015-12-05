@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import transmissionrpc
 import getpass
-import time
+from time import sleep
 #End imports
 
 
@@ -37,6 +37,7 @@ status = torrent.status
 
 #============================#
 if status == "stopped":
+    GPIO.setmod(GPIO.BMC)
     GPIO.setup(22, GPIO.OUT)
     GPIO.output(22, 1)
     print "Stopped"
@@ -48,3 +49,8 @@ elif status == "paused":
    print "Paused"
 else:
    print "Failure"
+
+#=======================
+sleep(5)
+print "Done"
+GPIO.cleanup()
