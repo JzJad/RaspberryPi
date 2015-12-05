@@ -37,8 +37,8 @@ status = torrent.status
 
 #============================#
 if status == "stopped":
-    print setRed
-    setRed
+    GPIO.setup(22, GPIO.OUT)
+    GPIO.output(22, 1)
     print "Stopped"
 elif status == "download pending":
    setBlue
