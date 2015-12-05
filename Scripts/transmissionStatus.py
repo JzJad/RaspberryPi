@@ -16,11 +16,6 @@ GPIO.setwarnings(False)
 GPIO.setup(22, GPIO.OUT)
 GPIO.setup(23, GPIO.OUT)
 GPIO.setup(24, GPIO.OUT)
-#Color Sets
-setRed = GPIO.output(22, 1)
-setBlue = GPIO.output(23, 1)
-setGreen = GPIO.output(24, 1)
-setYellow = GPIO.cleanup()
 #======End GPIO Setup======#
 rpcUrl = raw_input("Transmission URL: ")
 rpcPort = raw_input("Port: ")
@@ -30,15 +25,17 @@ rpcPass = getpass.getpass("Password: ")
 tc = transmissionrpc.Client(address=rpcUrl, port=rpcPort, user=rpcUser, password=rpcPass)
 torrent = tc.get_torrent(1)
 status = torrent.status
+print status
+sleep(3)
 
 
 
-
-
-#============================#
-if status == "stopped":
+'''
     GPIO.setmode(GPIO.BMC)
     GPIO.setup(22, GPIO.OUT)
+'''
+#============================#
+if status == "stopped":
     GPIO.output(22, 1)
     print "Stopped"
 elif status == "download pending":
