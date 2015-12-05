@@ -30,15 +30,11 @@ rpcPass = getpass.getpass("Password: ")
 tc = transmissionrpc.Client(address=rpcUrl, port=rpcPort, user=rpcUser, password=rpcPass)
 torrent = tc.get_torrent(1)
 status = torrent.status
-def tStatus(status):
-  print "Torrent is currently ",status
 
 
 
 
 
-status = torrent.status
-print tStatus
 #============================#
 if status == "stopped":
    setRed
