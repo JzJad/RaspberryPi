@@ -13,13 +13,13 @@ blue = 24
 #=== GPIO Setup ===#
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-GPIO.setup(red, GPIO.OUT)
-GPIO.setup(green, GPIO.OUT)
-GPIO.setup(blue, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
 #Color Sets
-setRed = GPIO.output(red, 1)
-setBlue = GPIO.output(green, 1)
-setGreen = GPIO.output(blue, 1)
+setRed = GPIO.output(22, 1)
+setBlue = GPIO.output(23, 1)
+setGreen = GPIO.output(24, 1)
 setYellow = GPIO.cleanup()
 #======End GPIO Setup======#
 rpcUrl = raw_input("Transmission URL: ")
