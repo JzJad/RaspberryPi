@@ -37,7 +37,8 @@ status = torrent.status
 
 #============================#
 if status == "stopped":
-   setRed
+    print setRed
+    setRed
    print "Stopped"
 elif status == "download pending":
    setBlue
