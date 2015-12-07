@@ -13,8 +13,12 @@ blue = 24
 #=== GPIO Setup ===#
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-#GPIO.setup(23, GPIO.OUT)
-#GPIO.setup(24, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
+setRed = "GPIO.output(22, 1)"
+setGreen = "GPIO.output(23, 1)"
+setBlue =  "GPIO.output(24, 1)"
 #======End GPIO Setup======#
 rpcUrl = raw_input("Transmission URL: ")
 rpcPort = raw_input("Port: ")
@@ -29,15 +33,11 @@ sleep(3)
 
 
 
-'''
-    GPIO.setmode(GPIO.BMC)
-    GPIO.setup(22, GPIO.OUT)
-'''
+
 #============================#
 if status == "stopped":
-    GPIO.setup(22, GPIO.OUT)
-    GPIO.output(22, 1)
-    print "Stopped"
+    setRed
+	print "Stopped"
 elif status == "download pending":
    print "Queued"
 elif status == "paused":
